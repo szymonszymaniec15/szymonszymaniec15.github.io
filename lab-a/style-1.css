@@ -1,3 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital@0;1&display=swap');
+
+
 body {
-  background-color: #dfecff;
+  background: radial-gradient(circle at center, #321d5a 0%, #0f081a 100%);
+  color: #d8c9ff;
+  height: 2vh;
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #f0f0f030;
+  box-shadow: 0 0 15px #00000050 inset;
+}
+
+.historia p, .wstep p{
+  margin: 15px;
+}
+
+@media (min-width: 800px) {
+
+  main{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas:
+      "fiona wstep"
+      "fiona imiona";
+    align-items: start;
+  }
+
+  .wstep, .imiona{
+    box-shadow: inset 10px 0 15px -8px #00000050;
+  }
+
+  .imiona ul{
+    list-style-image: url('assets/paw.png');
+    margin: 0;
+  }
+
+  .fiona{
+    grid-area: fiona;
+  }
+
+  .wstep{
+    grid-area: wstep;
+    height: 100%;
+  }
+
+  .imiona{
+    grid-area: imiona;
+    height: 100%;
+  }
+
+  .fiona ul{
+    padding: 0;
+  }
+
+  .os{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .os li{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 7.5vw;
+    border-radius: 10px;
+    background-image: radial-gradient(circle at center, #ffffff0f 0%, #0f081a 20%);
+    backdrop-filter: blur(10px) opacity(0.3);
+  }
+
+  .os li h3{
+    font-weight: bolder;
+    flex: 0 0 20%;
+  }
+  .os li p{
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  .os li img{
+    width: 20%;
+    align-self: center;
+    border-radius: 10px;
+    filter: grayscale(100%) brightness(80%) opacity(0.75  );
+  }
+}
+
+@media (max-width: 799px) {
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wstep, .imiona{
+    box-shadow: inset 10px 0 15px -8px #00000050;
+  }
+
+  .wstep p{
+    margin: 15px;
+  }
+
+  .wstep{
+    height: 100%;
+  }
+
+  .imiona{
+    height: 100%;
+  }
+
+  .imiona h2{
+    display: flex;
+    justify-content: center;
+  }
+
+  .imiona ul{
+    list-style-image: url('assets/paw.png');
+    margin: 0;
+  }
+
+
+
+
+
+  .fiona ul{
+    padding: 0;
+  }
+
+  .os{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .os li{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 7.5vw;
+    border-radius: 10px;
+    background-image: radial-gradient(circle at center, #ffffff0f 0%, #0f081a 20%);
+    backdrop-filter: blur(10px) opacity(0.3);
+  }
+
+  .os li h3{
+    font-weight: bolder;
+    flex: 0 0 20%;
+  }
+  .os li p{
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  .os li img{
+    width: 20%;
+    align-self: center;
+    border-radius: 10px;
+    filter: grayscale(100%) brightness(80%) opacity(0.75  );
+  }
 }
