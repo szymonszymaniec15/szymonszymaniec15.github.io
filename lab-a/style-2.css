@@ -28,40 +28,62 @@ header, footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  min-height: 15vh;
+  font-size: 2em;
+  color: white;
+  -webkit-text-stroke: 3px black;
+  box-shadow: 0 -5px 0 0 black inset;
   background: repeating-conic-gradient(
     var(--neon-pink) 0 25%,
     var(--blue-violet) 0 50%
   ) 50% / 50px 50px;
 }
 
-header {
-  height: 15vh;
-  font-size: 2em;
+footer{
+  font-size: 2.2em;
+  box-shadow: 0 5px 0 0 black inset;
+}
+
+
+.fiona li {
+  display: flex;
+  align-items: center;
+  border: 15px double black;
+  padding: 0 35px;
+  margin: 10px 0;
+  backdrop-filter: blur(10px);
+  background-color: #ffffff40;
+}
+
+.historia, .imiona{
   color: white;
-  -webkit-text-stroke: 3px black;
-  box-shadow: 0 -5px 0 0 black inset;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.wstep{
+  margin: 1% 5%;
+  padding: 35px;
+  border: 15px double black;
+  background-clip: padding-box  ;
+  background-image: radial-gradient(
+    var(--amber-gold) 0%,
+    var(--amber-gold) 15%,
+    transparent 15%
+  );
+  background-size: 20px 20px;
+}
+
+.os {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 800px) {
-
-  main{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .wstep{
-    margin: 1% 5%;
-    padding: 35px;
-    border: 15px double black;
-    background-clip: padding-box  ;
-    background-image: radial-gradient(
-      var(--amber-gold) 0%,
-      var(--amber-gold) 15%,
-      transparent 15%
-    );
-    background-size: 20px 20px;
-  }
 
   .fiona{
     display: flex;
@@ -71,15 +93,9 @@ header {
     padding: 35px;
   }
 
-  .historia{
-    color: white;
-  }
 
-  .os {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
+
+
 
   .os h3{
     align-self: center;
@@ -88,16 +104,6 @@ header {
   .os p{
     padding: 0 15px;
     margin: 0;
-  }
-
-  .fiona li {
-    display: flex;
-    align-items: center;
-    border: 15px double black;
-    padding: 0 35px;
-    margin: 10px 0;
-    backdrop-filter: blur(10px);
-    background-color: #ffffff40;
   }
 
   .fiona li:nth-child(1), .fiona li:nth-child(3) {
@@ -139,5 +145,19 @@ header {
   .imiona ul li{
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 799px) {
+  img {
+    flex: 0 0 10%;
+    width: 10%;
+    height: auto;
+    align-self: center;
+    filter: saturate(500%) opacity(0.6);
+  }
+
+  .os h3{
+    flex: 0 0 25%
   }
 }
