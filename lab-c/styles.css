@@ -1,3 +1,49 @@
-body {
-  background-color: #e6f1fc;
+html {
+  --cerulean: #0081a7ff;
+  --tropical-teal: #00afb9ff;
+  --light-yellow: #fdfcdcff;
+  --soft-apricot: #fed9b7ff;
+  --vibrant-coral: #f07167ff;
 }
+
+body {
+  background-color: var(--tropical-teal);
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#map {
+  height: 300px;
+  width: 600px;
+}
+
+#rasterMap {
+  height: 150px;
+  width: 300px;
+}
+
+#puzzleTable, #dragTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 600px;
+  box-shadow: inset 0 0 1px black;
+}
+
+.puzzle {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: var(--soft-apricot);
+  margin: 5px;
+}
+
+.puzzle-container {
+  width: 25%;
+  height: 25%;
+}
+
+
