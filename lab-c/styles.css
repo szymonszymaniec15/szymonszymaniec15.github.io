@@ -46,4 +46,10 @@ main{
   height: 25%;
 }
 
+#rasterCopy {
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}
+
 

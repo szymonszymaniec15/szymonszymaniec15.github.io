@@ -44,6 +44,13 @@ document.getElementById("saveButton").addEventListener("click", function() {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
       leafletImage(map, function (err, canvas) {
+
+        let rm = document.getElementById("rasterCopy");
+        let rc = rm.getContext("2d");
+        rc.drawImage(canvas, 0,0);
+
+
+
         const index = i*4+j;
         let rasterMap = document.getElementById("puzzle" + index);
         let rasterContext = rasterMap.getContext("2d");
@@ -76,7 +83,7 @@ document.getElementById("saveButton").addEventListener("click", function() {
         myElement.style.height = myElement.style.width = 100 + "%";
         myElement.style.margin = 0;
         this.style.border = "none";
-
+        console.log(document.querySelectorAll(".correct").length);
         if (document.querySelectorAll(".correct").length === 16) {
           setTimeout(() => {
             if (!("Notification" in window)) {
